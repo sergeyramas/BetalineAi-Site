@@ -6,6 +6,7 @@ import Cases from './components/Cases';
 import ChatDemo from './components/ChatDemo';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
+import BottomBanner from './components/BottomBanner';
 import './App.css';
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
 
       <Footer />
       <Popup />
+      <BottomBanner />
     </div>
   );
 }
