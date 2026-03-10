@@ -71,10 +71,10 @@ const Header = ({ theme, toggleTheme }) => {
                         >
                             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                         </button>
-                        <a href="http://localhost:3737" target="_blank" rel="noopener noreferrer">
+                        <a href="/platform/index.html" target="_blank" rel="noopener noreferrer">
                             <button className="btn-secondary" style={{ padding: '0.625rem 1.25rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)' }}>Личный кабинет</button>
                         </a>
-                        <a href="http://localhost:3737" target="_blank" rel="noopener noreferrer">
+                        <a href="/platform/index.html" target="_blank" rel="noopener noreferrer">
                             <button className="btn-primary" style={{ padding: '0.625rem 1.25rem' }}>Создать бота</button>
                         </a>
                     </motion.div>
@@ -109,10 +109,10 @@ const Header = ({ theme, toggleTheme }) => {
                                 <Phone size={20} />
                                 8 800 200-12-59
                             </a>
-                            <a href="http://localhost:3737" target="_blank" rel="noopener noreferrer" style={{ width: '100%', maxWidth: '300px' }}>
+                            <a href="/platform/index.html" target="_blank" rel="noopener noreferrer" style={{ width: '100%', maxWidth: '300px' }}>
                                 <button className="btn-secondary" style={{ width: '100%', padding: '0.75rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', marginBottom: '0.5rem' }}>Личный кабинет</button>
                             </a>
-                            <a href="http://localhost:3737" target="_blank" rel="noopener noreferrer" style={{ width: '100%', maxWidth: '300px' }}>
+                            <a href="/platform/index.html" target="_blank" rel="noopener noreferrer" style={{ width: '100%', maxWidth: '300px' }}>
                                 <button className="btn-primary" style={{ width: '100%', padding: '0.75rem' }}>Создать бота</button>
                             </a>
                         </div>
