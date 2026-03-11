@@ -11,31 +11,14 @@ import BottomBanner from './components/BottomBanner';
 import './App.css';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-    if (mediaQuery.matches) {
-      setTheme('light');
-    }
-  }, []);
-
   return (
     <div className="app-container">
-      {/* Background ambients */}
-      <div className="bg-glow" style={{ top: '-10%', left: '-10%' }}></div>
-      <div className="bg-glow-purple" style={{ bottom: '20%', right: '-5%' }}></div>
-      <div className="bg-glow" style={{ top: '40%', left: '50%', transform: 'translateX(-50%)' }}></div>
+      {/* Warm ambient shapes */}
+      <div className="bg-warm-circle bg-warm-amber" style={{ top: '-15%', right: '-10%' }}></div>
+      <div className="bg-warm-circle bg-warm-emerald" style={{ bottom: '30%', left: '-8%' }}></div>
+      <div className="bg-warm-circle bg-warm-amber" style={{ top: '50%', left: '60%' }}></div>
 
-      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Header />
 
       <main>
         <HookSection />
