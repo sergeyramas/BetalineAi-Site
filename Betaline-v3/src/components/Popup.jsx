@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Zap, CheckCircle, ChevronRight, ChevronLeft } from 'lucide-react';
 
@@ -7,6 +7,12 @@ const Popup = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [sent, setSent] = useState(false);
+
+    useEffect(() => {
+        const handleOpenPopup = () => setIsOpen(true);
+        window.addEventListener('openAuditPopup', handleOpenPopup);
+        return () => window.removeEventListener('openAuditPopup', handleOpenPopup);
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();

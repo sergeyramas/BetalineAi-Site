@@ -48,7 +48,16 @@ const Header = () => {
                             8 800 200-12-59
                         </a>
                         <a href="#offer">
-                            <button className="btn-primary" style={{ padding: '0.625rem 1.5rem' }}>Получить аудит</button>
+                            <button 
+                                className="btn-primary" 
+                                style={{ padding: '0.625rem 1.5rem' }}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    window.dispatchEvent(new CustomEvent('openAuditPopup'));
+                                }}
+                            >
+                                Получить аудит
+                            </button>
                         </a>
                     </div>
 
@@ -84,7 +93,17 @@ const Header = () => {
                                 8 800 200-12-59
                             </a>
                             <a href="#offer" style={{ width: '100%', maxWidth: '300px' }}>
-                                <button className="btn-primary" style={{ width: '100%', padding: '0.875rem' }}>Получить аудит</button>
+                                <button 
+                                    className="btn-primary" 
+                                    style={{ width: '100%', padding: '0.875rem' }}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setMobileMenuOpen(false);
+                                        window.dispatchEvent(new CustomEvent('openAuditPopup'));
+                                    }}
+                                >
+                                    Получить аудит
+                                </button>
                             </a>
                         </div>
                     </motion.div>
